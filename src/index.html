@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-['Montserrat'] flex items-center justify-center">
+    <!-- Content Wrapper -->
+    <section id="content-wrapper" class="text-white bg-slate-950 w-[100%] m-h-[100vh]">
+        <div class="w-[90%] mx-auto my-[50px]">
+            <form id="form-search">
+                <input type="text" name="search" id="inputSearch" placeholder="Search for cities"
+                    class="w-[100%] md:w-[65%] bg-slate-800 p-4 rounded-md text-white outline-none font-[500]">
+                    <br>
+                <span class="text-red-600 text-[12px] hidden" id="error-message">Error</span>
+            </form>
+
+            <!-- Main content -->
+            <main class="flex-col lg:flex-row flex items-center justify-between gap-6">
+                <div class="flex-[100%] w-[100%] md:flex-[65%]">
+                    <!-- Basic informacion -->
+                    <div id="base-informacion" class="flex items-center justify-between py-5">
+                        <!-- Data -->
+                    </div>
+                    <!-- Basic informacion -->
+
+                    <!-- Today's forecast  -->
+                    <div class="bg-slate-800 p-5 rounded-md uppercase text-gray-400 font-[700]">
+                        <h4 class="mb-5">TODAY'S FORECAST</h4>
+                        <div id="fore-cast" class="grid-cols-3 grid sm:grid-cols-6">
+                            <!-- Todays foreCast -->
+                        </div>
+                    </div>
+                    <!-- Today's forecast -->
+
+                    <!-- Air conditions -->
+                    <div class="bg-slate-800 p-5 rounded-md text-gray-400 font-[700] mt-5">
+                        <h4 class="mb-4">AIR CONDITIONS</h4>
+                        <div class="grid grid-cols-2 ml-2 gap-3" id="conditions">
+                            <div>
+                                <p class="flex items-center gap-2">
+                                    <i class='bx bxs-thermometer text-[25px]'></i>
+                                    Real feel
+                                </p>
+                                <h3 class="text-white text-[30px] font-[700] pl-5">30 C</h3>
+                            </div>
+                            <div>
+                                <p class="flex items-center gap-2">
+                                    <i class='bx bx-wind text-[25px]'></i>
+                                    Wind
+                                </p>
+                                <h3 class="text-white text-[30px] font-[700] pl-5">0.2 km/h</h3>
+                            </div>
+                            <div>
+                                <p class="flex items-center gap-2">
+                                    <i class='bx bxs-droplet text-[25px]'></i>
+                                    Chance of rain
+                                </p>
+                                <h3 class="text-white text-[30px] font-[700] pl-5">0%</h3>
+                            </div>
+                            <div>
+                                <p class="flex items-center gap-2">
+                                    <i class='bx bx-compass'></i>
+                                    UV index
+                                </p>
+                                <h3 class="text-white text-[30px] font-[700] pl-5 m-[30px]">3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Air conditions -->
+                </div>
+
+                <!-- 5 day forecast -->
+                <div class="flex-[100%] w-[100%] md:flex-[35%]">
+                    <div class="bg-slate-800 px-5 py-10 rounded-md my-5 flex items-center justify-evenly">
+                        <div>
+                            <p class="text-[18px]">
+                                <i class='bx bxs-sun text-[25px]'></i>
+                                Sunrise
+                            </p>
+                            <h3 class="text-[30px] font-[700]" id="sunrise">05:36</h3>
+                        </div>
+                        <div>
+                            <p class="text-[18px]">
+                                <i class='bx bxs-moon text-[25px]' ></i>
+                                Sunset
+                            </p>
+                            <h3 class="text-[30px] font-[700]" id="sunset">20:36</h3>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-md my-5">
+                        <h4 class="font-[700]">5 DAY FORECAST</h4>
+                        <ul class="font-[700] w-[100%]" id="forecastFiveDay">
+                            <!-- 5 day forecast -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 5 day forecast -->
+            </main>
+            <!-- Main content -->
+        </div>
+    </section>
+    <!-- Content Wrapper -->
+
+
+    <!-- Script -->
+    <script src="./js/app.js"></script>
+    <!-- Script -->
+</body>
+
+</html>
